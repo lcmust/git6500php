@@ -1,0 +1,9 @@
+#
+#.gitignore
+#db_bak/
+*~
+*.db
+*.ico
+*.png
+*.jpg
+*.jpeg
