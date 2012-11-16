@@ -6,7 +6,8 @@ Listen 8009
 	DirectoryIndex index.html index.php
 
 	###at second line
-	Alias /  /home/love/chengl6500/mysite/phpapp/
+	#Alias /speedphp  /home/love/git6500php/speedphp/
+	Alias /  /home/love/git6500php/
 	<Location />
 		AllowOverride all
 		AddHandler fcgid-script .php
