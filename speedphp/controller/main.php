@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 class main extends spController
 {
 	function index(){
@@ -20,6 +20,7 @@ class main extends spController
 		}
 		$posturl = spUrl("main", "write");
 		echo "<p align=center><h2>我的留言本</h2></p>";
+		echo "<p>$MY_PHP_VERSION</p>";
 		echo "<p>请写下您的留言：</p>
 		<form action={$posturl} method=post>
 			<p>您的名字：<input type=text name=name></p>
@@ -27,7 +28,7 @@ class main extends spController
 			<p>留言内容：<textarea name=contents></textarea></p>
 			<p><input type=submit value=提交></p>
 		</form>";
-		$guestbook = spClass("guestbook");
+		$guestbook = spClass("m_guestbook");
 		if( $result = $guestbook->findAll()){
 			foreach($result as $value){
 				$contentsurl = spUrl("main", "show", array('id'=>$value['id']));
@@ -38,7 +39,7 @@ class main extends spController
 
 	function show(){
 		$id = $this->spArgs("id");
-		$guestbook = spClass("guestbook");
+		$guestbook = spClass("m_guestbook");
 		$condition = array('id'=>$id);
 		$result = $guestbook->find($condition);
 		echo "<table border='1'>";
@@ -52,7 +53,7 @@ class main extends spController
 	}
 	
 	function write(){
-		$guestbook = spClass("guestbook");
+		$guestbook = spClass("m_guestbook");
 
 		$input = $this->spArgs();
 		if ($input['name'] &&  $input['name'] && $input['contents']){

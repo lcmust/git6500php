@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 class number extends spController
 {
 	function show(){
