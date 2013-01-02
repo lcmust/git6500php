@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 class m_guestbook extends spModel
 {
 	var $pk = "id";

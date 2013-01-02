@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 class guestbook extends spController
 {
 	function index() {

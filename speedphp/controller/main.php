@@ -51,10 +51,9 @@ class main extends spController
 		echo "<h5>Enjoy, Speed of PHP!</h5>";
 		echo "<a href='index.php?c=main&a=time'>当前时间</a>";
 	}
-	
+
 	function write(){
 		$guestbook = spClass("m_guestbook");
-
 		$input = $this->spArgs();
 		if ($input['name'] &&  $input['name'] && $input['contents']){
 			echo "<br>name:{$input['name']}";
@@ -66,8 +65,17 @@ class main extends spController
 			echo "你输入的内容不完整！<a href=/speedphp/index.php>返回</a>";
 		}
 	}
-	
+
 	function time(){
 		echo date("Y-m-d H:i:s");
 	}
+
+	function test1() {
+		echo "dfa";
+
+
+		echo "da222";
+	}
+
+
 }
